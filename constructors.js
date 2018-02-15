@@ -15,6 +15,11 @@
 
 // Code here
 
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -34,7 +39,7 @@ function Employee(name, email, hireDate) {
 
 // Code here
 
-
+const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98')
 
 ////////// PROBLEM 4 //////////
 
@@ -44,7 +49,15 @@ var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); // Increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); // Increments mustang' move property by 10. Returns the new move property.
 // Do not edit the code above.
-
+function Car(make, model, year){
+  this.make=make,
+  this.model=model,
+  this.year=year,
+  this.move = 0,
+  this.moveCar = function(move) {
+    return this.move += 10
+  }
+}
 /*
   Write a constructor function, including method definitions, which will make the above function invocations function properly.
 
